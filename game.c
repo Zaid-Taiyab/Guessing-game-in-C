@@ -65,7 +65,7 @@ int main() {
     struct Player leaderboard[5];
     int numPlayers = 0;
 
-    // Load leaderboard from file (if it exists)
+    // Load leaderboard from file
     FILE *file = fopen("leaderboard.txt", "r");
     if (file != NULL) {
         while (fread(&leaderboard[numPlayers], sizeof(struct Player), 1, file) == 1 && numPlayers < 5) {
